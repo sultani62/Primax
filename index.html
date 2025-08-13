@@ -1025,6 +1025,105 @@
         background-color: white !important;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
+
+      /* New Codes */
+      /* ===== Section Fade-in Animation ===== */
+      @keyframes fadeSlideUp {
+        0% {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Initial hidden state */
+      .hidden-animate {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      /* Applied when in view */
+      .fade-in-up {
+        animation: fadeSlideUp 0.8s ease-out forwards;
+      }
+
+      /* Staggered effect */
+      .fade-delay-1 {
+        animation-delay: 0.2s;
+      }
+      .fade-delay-2 {
+        animation-delay: 0.4s;
+      }
+      .fade-delay-3 {
+        animation-delay: 0.6s;
+      }
+      .fade-delay-4 {
+        animation-delay: 0.8s;
+      }
+      .fade-delay-5 {
+        animation-delay: 1s;
+      }
+      .fade-delay-6 {
+        animation-delay: 1.2s;
+      }
+      .fade-delay-7 {
+        animation-delay: 1.4s;
+      }
+      .fade-delay-8 {
+        animation-delay: 1.6s;
+      }
+      .fade-delay-9 {
+        animation-delay: 1.8s;
+      }
+
+      /* Other styles from before */
+      .section-title span {
+        color: #ff6f61;
+        transition: color 0.3s ease;
+      }
+      .section-title span:hover {
+        color: #e63946;
+      }
+      .contact-form {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: box-shadow 0.3s ease;
+      }
+      .contact-form:hover {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      }
+      .contact-form input,
+      .contact-form select,
+      .contact-form textarea {
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 10px;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      .contact-form input:focus,
+      .contact-form select:focus,
+      .contact-form textarea:focus {
+        border-color: #ff6f61;
+        box-shadow: 0 0 5px rgba(255, 111, 97, 0.3);
+        outline: none;
+      }
+      .contact-form button {
+        background-color: #ff6f61;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      .contact-form button:hover {
+        background-color: #e63946;
+        transform: translateY(-2px);
+      }
     </style>
   </head>
   <body>
@@ -1241,7 +1340,7 @@
             </p>
           </div>
         </div>
-        <div class="row g-5 mt-4">
+        <div class="row g-5 mt-4 justify-content-center">
           <div class="col-lg-4 col-md-6">
             <div
               class="service-card animate__animated animate__fadeInUp animate__delay-2"
@@ -1287,7 +1386,9 @@
               class="service-card animate__animated animate__fadeInUp animate__delay-4"
             >
               <div class="service-card-inner">
-                <div class="service-icon"><i class="fas fa-stamp"></i></div>
+                <div class="service-icon">
+                  <i class="fas fa-stamp"></i> <i class="bi bi-fingerprint"></i>
+                </div>
                 <h3>Notary Public</h3>
                 <p>
                   State-certified notary services for documents, affidavits,
@@ -1420,19 +1521,40 @@
               </div>
             </div>
           </div>
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="service-card animate__animated animate__fadeInUp animate__delay-6"
+            >
+              <div class="service-card-inner">
+                <div class="service-icon">
+                  <i class="fa-solid fa-mobile"></i>
+                </div>
+                <h3>Mobile Fingerprinting Services</h3>
+                <p>
+                  Mobile Fingerprinting Services – We come to you with certified
+                  Live Scan or offering fast, secure, and convenient service at
+                  your home, office, or event.
+                </p>
+                <a href="tel:9169319021" class="service-link"
+                  >Call now <i class="fas fa-arrow-right"></i
+                ></a>
+                <img class="card-img-bottom" src="img/img-10.png" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="container-fluid slider-container">
         <div class="slide-tracker">
           <div class="container-vid">
             <div class="slider-vid">
-              <img class="rounded" src="img-2/Slide1.PNG" alt="" />
-              <img class="rounded" src="img-2/Slide2.PNG" alt="" />
-              <img class="rounded" src="img-2/Slide3.PNG" alt="" />
-              <img class="rounded" src="img-2/Slide4.PNG" alt="" />
-              <img class="rounded" src="img-2/Slide5.PNG" alt="" />
-              <img class="rounded" src="img-2/Slide6.PNG" alt="" />
-              <img class="rounded" src="img-2/Slide7.PNG" alt="" />
+              <img class="rounded" src="img/Slide1.png" alt="" />
+              <img class="rounded" src="img/Slide2.png" alt="" />
+              <img class="rounded" src="img/Slide3.png" alt="" />
+              <img class="rounded" src="img/Slide4.png" alt="" />
+              <img class="rounded" src="img/Slide5.png" alt="" />
+              <img class="rounded" src="img/Slide6.png" alt="" />
+              <img class="rounded" src="img/Slide7.png" alt="" />
             </div>
           </div>
         </div>
@@ -1543,8 +1665,7 @@
                   "Outstanding experience! The facility was very clean and had a
                   pleasant atmosphere. I was assisted promptly, and the Primax
                   team was courteous and efficient. I really appreciated how
-                  smooth and professional the whole experience was. Thank
-                  you—I'll definitely be coming back!"
+                  smooth and professional the whole experience was. Thank you!"
                 </p>
                 <div class="client-info">
                   <img src="img/pic-1.jpg" alt="Client" class="client-img" />
@@ -1571,7 +1692,7 @@
                   Live Scan services. The office was easy to find, and the whole
                   process was quick and seamless. I went in for a background
                   check and have already been notified that it was successfully
-                  processed. 🥳 Fast, efficient, and highly recommended!
+                  processed.
                 </p>
                 <div class="client-info">
                   <img src="img/pic-1.jpg" alt="Client" class="client-img" />
@@ -1709,21 +1830,135 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-7">
-            <div
-              class="contact-form animate__animated animate__fadeInUp animate__delay-6"
-            >
-              <div class="contact-form-header">
-                <h3><i class="fas fa-map-marked-alt me-2"></i> Find Us</h3>
+        </div>
+      </div>
+    </section>
+    <!-- New Section -->
+    <section id="appointment" class="section">
+      <div class="container hidden-animate">
+        <div class="row">
+          <div class="col-12 text-center hidden-animate fade-delay-1">
+            <h2 class="section-title">Book an <span>Appointment</span></h2>
+            <p class="section-subtitle">
+              Schedule a consultation with our tax and financial experts today
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-5 mt-4">
+          <div class="col-lg-12 hidden-animate fade-delay-2">
+            <div class="contact-form">
+              <div class="contact-form-header hidden-animate fade-delay-3">
+                <h3>
+                  <i class="fas fa-calendar-plus me-2"></i> Schedule Your Visit
+                </h3>
               </div>
               <div class="contact-form-body">
-                <div class="ratio ratio-16x9">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.357315436434!2d-121.43733772359527!3d38.59201397918227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809adc676547539f%3A0x6e74bf2869555946!2s2600%20Alta%20Arden%20Expy%20Suite%20B%2C%20Sacramento%2C%20CA%2095825!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-                    allowfullscreen=""
-                    loading="lazy"
-                  ></iframe>
-                </div>
+                <form id="appointment-form">
+                  <div class="row g-4">
+                    <div class="col-md-6 hidden-animate fade-delay-4">
+                      <label for="firstName" class="form-label"
+                        >First Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="firstName"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 hidden-animate fade-delay-5">
+                      <label for="lastName" class="form-label">Last Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="lastName"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 hidden-animate fade-delay-6">
+                      <label for="phone" class="form-label">Phone</label>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 hidden-animate fade-delay-7">
+                      <label for="email" class="form-label">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 hidden-animate fade-delay-8">
+                      <label for="appointmentDate" class="form-label"
+                        >Preferred Date</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="appointmentDate"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6 hidden-animate fade-delay-9">
+                      <label for="appointmentTime" class="form-label"
+                        >Preferred Time</label
+                      >
+                      <select class="form-select" id="appointmentTime" required>
+                        <option value="" selected disabled>Select Time</option>
+                        <option value="09:00">9:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="13:00">1:00 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="17:00">5:00 PM</option>
+                      </select>
+                    </div>
+                    <div class="col-12 hidden-animate">
+                      <label for="service" class="form-label"
+                        >Service Needed</label
+                      >
+                      <select class="form-select" id="service" required>
+                        <option value="" selected disabled>
+                          Select Service
+                        </option>
+                        <option value="Tax Preparation">Tax Preparation</option>
+                        <option value="Financial Planning">
+                          Financial Planning
+                        </option>
+                        <option value="Bookkeeping">Bookkeeping</option>
+                        <option value="IRS Representation">
+                          IRS Representation
+                        </option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                    <div class="col-12 hidden-animate">
+                      <label for="message" class="form-label"
+                        >Additional Notes</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        rows="4"
+                        placeholder="Tell us more about your needs..."
+                      ></textarea>
+                    </div>
+                    <div class="col-12 hidden-animate">
+                      <button type="submit" class="btn btn-primary w-100 py-3">
+                        Book Appointment
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -1965,6 +2200,22 @@
         } else {
           navbar.classList.remove("scrolled");
         }
+      });
+      // New JS Codes
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fade-in-up");
+              observer.unobserve(entry.target); // animate once
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      document.querySelectorAll(".hidden-animate").forEach((el) => {
+        observer.observe(el);
       });
     </script>
   </body>
