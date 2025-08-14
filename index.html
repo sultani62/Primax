@@ -165,7 +165,7 @@
       .hero {
         background: linear-gradient(
             135deg,
-            rgba(0, 51, 102, 0.9) 0%,
+            #003366e6 0%,
             rgba(0, 38, 77, 0.8) 100%
           ),
           url("https://images.unsplash.com/photo-1554224154-25250fe497b5?ixlib=rb-4.0.3")
@@ -1026,104 +1026,7 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
 
-      /* New Codes */
-      /* ===== Section Fade-in Animation ===== */
-      @keyframes fadeSlideUp {
-        0% {
-          opacity: 0;
-          transform: translateY(40px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Initial hidden state */
-      .hidden-animate {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-
-      /* Applied when in view */
-      .fade-in-up {
-        animation: fadeSlideUp 0.8s ease-out forwards;
-      }
-
-      /* Staggered effect */
-      .fade-delay-1 {
-        animation-delay: 0.2s;
-      }
-      .fade-delay-2 {
-        animation-delay: 0.4s;
-      }
-      .fade-delay-3 {
-        animation-delay: 0.6s;
-      }
-      .fade-delay-4 {
-        animation-delay: 0.8s;
-      }
-      .fade-delay-5 {
-        animation-delay: 1s;
-      }
-      .fade-delay-6 {
-        animation-delay: 1.2s;
-      }
-      .fade-delay-7 {
-        animation-delay: 1.4s;
-      }
-      .fade-delay-8 {
-        animation-delay: 1.6s;
-      }
-      .fade-delay-9 {
-        animation-delay: 1.8s;
-      }
-
-      /* Other styles from before */
-      .section-title span {
-        color: #ff6f61;
-        transition: color 0.3s ease;
-      }
-      .section-title span:hover {
-        color: #e63946;
-      }
-      .contact-form {
-        background: #ffffff;
-        border-radius: 10px;
-        padding: 25px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        transition: box-shadow 0.3s ease;
-      }
-      .contact-form:hover {
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-      }
-      .contact-form input,
-      .contact-form select,
-      .contact-form textarea {
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        padding: 10px;
-        transition: border-color 0.3s ease, box-shadow 0.3s ease;
-      }
-      .contact-form input:focus,
-      .contact-form select:focus,
-      .contact-form textarea:focus {
-        border-color: #ff6f61;
-        box-shadow: 0 0 5px rgba(255, 111, 97, 0.3);
-        outline: none;
-      }
-      .contact-form button {
-        background-color: #ff6f61;
-        border: none;
-        border-radius: 6px;
-        font-weight: 600;
-        font-size: 1.1rem;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-      }
-      .contact-form button:hover {
-        background-color: #e63946;
-        transform: translateY(-2px);
-      }
+   
     </style>
   </head>
   <body>
@@ -1208,8 +1111,8 @@
             <div
               class="d-flex flex-wrap gap-3 mt-5 animate__animated animate__fadeInUp animate__delay-2"
             >
-              <a href="#services" class="btn btn-primary"
-                ><i class="fas fa-briefcase"></i> Our Services</a
+              <a href="Contact-us.html" class="btn btn-primary" target="_blank"
+                ><i class="fas fa-briefcase"></i> Book an appointment</a
               >
               <a href="tel:9169319021" class="btn btn-outline-primary"
                 ><i class="fas fa-phone"></i> Call Now</a
@@ -1833,139 +1736,7 @@
         </div>
       </div>
     </section>
-    <!-- New Section -->
-    <section id="appointment" class="section">
-      <div class="container hidden-animate">
-        <div class="row">
-          <div class="col-12 text-center hidden-animate fade-delay-1">
-            <h2 class="section-title">Book an <span>Appointment</span></h2>
-            <p class="section-subtitle">
-              Schedule a consultation with our tax and financial experts today
-            </p>
-          </div>
-        </div>
-
-        <div class="row g-5 mt-4">
-          <div class="col-lg-12 hidden-animate fade-delay-2">
-            <div class="contact-form">
-              <div class="contact-form-header hidden-animate fade-delay-3">
-                <h3>
-                  <i class="fas fa-calendar-plus me-2"></i> Schedule Your Visit
-                </h3>
-              </div>
-              <div class="contact-form-body">
-                <form id="appointment-form">
-                  <div class="row g-4">
-                    <div class="col-md-6 hidden-animate fade-delay-4">
-                      <label for="firstName" class="form-label"
-                        >First Name</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="firstName"
-                        required
-                      />
-                    </div>
-                    <div class="col-md-6 hidden-animate fade-delay-5">
-                      <label for="lastName" class="form-label">Last Name</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="lastName"
-                        required
-                      />
-                    </div>
-                    <div class="col-md-6 hidden-animate fade-delay-6">
-                      <label for="phone" class="form-label">Phone</label>
-                      <input
-                        type="tel"
-                        class="form-control"
-                        id="phone"
-                        required
-                      />
-                    </div>
-                    <div class="col-md-6 hidden-animate fade-delay-7">
-                      <label for="email" class="form-label">Email</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        required
-                      />
-                    </div>
-                    <div class="col-md-6 hidden-animate fade-delay-8">
-                      <label for="appointmentDate" class="form-label"
-                        >Preferred Date</label
-                      >
-                      <input
-                        type="date"
-                        class="form-control"
-                        id="appointmentDate"
-                        required
-                      />
-                    </div>
-                    <div class="col-md-6 hidden-animate fade-delay-9">
-                      <label for="appointmentTime" class="form-label"
-                        >Preferred Time</label
-                      >
-                      <select class="form-select" id="appointmentTime" required>
-                        <option value="" selected disabled>Select Time</option>
-                        <option value="09:00">9:00 AM</option>
-                        <option value="10:00">10:00 AM</option>
-                        <option value="11:00">11:00 AM</option>
-                        <option value="12:00">12:00 PM</option>
-                        <option value="13:00">1:00 PM</option>
-                        <option value="14:00">2:00 PM</option>
-                        <option value="15:00">3:00 PM</option>
-                        <option value="16:00">4:00 PM</option>
-                        <option value="17:00">5:00 PM</option>
-                      </select>
-                    </div>
-                    <div class="col-12 hidden-animate">
-                      <label for="service" class="form-label"
-                        >Service Needed</label
-                      >
-                      <select class="form-select" id="service" required>
-                        <option value="" selected disabled>
-                          Select Service
-                        </option>
-                        <option value="Tax Preparation">Tax Preparation</option>
-                        <option value="Financial Planning">
-                          Financial Planning
-                        </option>
-                        <option value="Bookkeeping">Bookkeeping</option>
-                        <option value="IRS Representation">
-                          IRS Representation
-                        </option>
-                        <option value="Other">Other</option>
-                      </select>
-                    </div>
-                    <div class="col-12 hidden-animate">
-                      <label for="message" class="form-label"
-                        >Additional Notes</label
-                      >
-                      <textarea
-                        class="form-control"
-                        id="message"
-                        rows="4"
-                        placeholder="Tell us more about your needs..."
-                      ></textarea>
-                    </div>
-                    <div class="col-12 hidden-animate">
-                      <button type="submit" class="btn btn-primary w-100 py-3">
-                        Book Appointment
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+  
     <!-- Footer -->
     <footer class="py-5">
       <div class="container">
@@ -2211,7 +1982,7 @@
             }
           });
         },
-        { threshold: 0.15 }
+        { threshold: 0.1 }
       );
 
       document.querySelectorAll(".hidden-animate").forEach((el) => {
